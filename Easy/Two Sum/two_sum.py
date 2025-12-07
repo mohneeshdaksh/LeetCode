@@ -3,16 +3,15 @@
 nums = [2,7,11,15]
 
 target = 9
-output = []
 
-for n in range(len(nums)):
-    for m in range(n + 1, len(nums)):
-        sum = nums[n] + nums[m]
-        if sum == target:
-            output.append(n)
-            output.append(m)
-            break
+seen = {}
 
-print(output)
+for i, num in enumerate(nums):
+    required = target - num
+    if required in seen:
+        print([seen[required], i])
+        break
+    
+    seen[num] = i
 
 # Need to work on Runtime
