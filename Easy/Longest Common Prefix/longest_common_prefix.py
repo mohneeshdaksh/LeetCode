@@ -1,8 +1,8 @@
 # https://leetcode.com/problems/longest-common-prefix/description/
 
 strs = ["flower","flow","flight"]
-strs = ["flower","alow","blight"]
-strs = ["flower","flow","flowht"]
+# strs = ["flower","alow","blight"]
+# strs = ["flower","flow","flowht"]
 
 # We stop at smallest word because prefix can never be greater than smallest word
 # i = 0 --> i = len(smallest word)
@@ -27,7 +27,6 @@ first_word = strs[0]
 for i in range(len(first_word)):
     check_for_all = True
     for current_word in strs[1:]:
-        similarity_check = False        
         if i == len(current_word):
             check_for_all = False
             break
