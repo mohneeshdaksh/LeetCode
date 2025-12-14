@@ -7,7 +7,6 @@ nums = []
 
 val = 2
 
-
 k = 0
 for i in range(len(nums)):
     if nums[i] != val:
