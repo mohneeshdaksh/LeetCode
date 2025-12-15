@@ -7,19 +7,17 @@ target = 9
 left_pointer = 0
 right_pointer = len(nums) - 1
 
-while (left_pointer != right_pointer):
+while (left_pointer <= right_pointer):
     mid = left_pointer + (right_pointer - left_pointer) // 2
 
-    if nums[mid] > target:
-        right_pointer = mid
-    elif nums[mid] < target:
-        left_pointer = mid + 1
-    else:
-        left_pointer = mid
+    if nums[mid] == target:
+        print(mid)
         break
+    elif nums[mid] > target:
+        right_pointer = mid - 1
+    else:
+        left_pointer = mid + 1
 
-if target > nums[left_pointer]:
-    print(left_pointer + 1)
 else:
     print(left_pointer)
 
