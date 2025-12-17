@@ -1,16 +1,26 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 
-# prices = [7,2,8,1,5,3,6,4]
-prices = [7,6,5,4,3,2,1]
+prices = [7,2,8,1,5,3,6,4]
+# prices = [7,6,5,4,3,2,1]
+# prices = [0]
 
 max_profit = 0
 
+min_price_index = 0
 
-for buy_day in range(len(prices)):
-    for sell_day in range((buy_day+1), len(prices)):
-        profit = prices[sell_day] - prices[buy_day]
+for day in range(1, len(prices)):
+    if prices[day] < prices[min_price_index]:
+        min_price_index = day
+    else: 
+        profit = prices[day] - prices[min_price_index]
         if profit > max_profit:
             max_profit = profit
+
+
+    # for sell_day in range((buy_day+1), len(prices)):
+    #     profit = prices[sell_day] - prices[buy_day]
+    #     if profit > max_profit:
+    #         max_profit = profit
             # day_to_buy = buy_day + 1
             # day_to_sell = sell_day + 1
 
