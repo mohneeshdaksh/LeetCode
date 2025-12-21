@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/summary-ranges/description/
 
-nums = []
+nums = [0,1,2,3,6,7,9]
 
 summary_ranges = []
 
