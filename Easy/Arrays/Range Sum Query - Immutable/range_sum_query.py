@@ -5,19 +5,22 @@ from typing import List
 class NumArray:
 
     def __init__(self, nums: List[int]):
-        self.nums = nums
+        self.prefix = [0]
+        running = 0
+        for i in nums:
+            running += i
+            self.prefix.append(running)
 
     def sumRange(self, left: int, right: int) -> int:
-        sum = 0
-        for i in range(left, right+1):
-            sum += self.nums[i]
-        return sum
+        print(self.prefix)
+        total = (self.prefix[right+1]) - self.prefix[left]
+        return total
 
 nums = [-2, 0, 3, -5, 2, -1]
 
 range_sum = NumArray(nums)
 
-first_sum = range_sum.sumRange(0, 3)
+first_sum = range_sum.sumRange(1, 3)
 print(first_sum)
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
