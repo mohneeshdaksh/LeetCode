@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/roman-to-integer/description/
 
-s = "I"
+s = "MCMXCIV"
 
 roman = {
     "M":1000,
