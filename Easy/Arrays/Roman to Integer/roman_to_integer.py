@@ -12,11 +12,8 @@ roman = {
     "I":1
 }
 
-
 i = 0
-
 integer = 0
-
 
 while i < len(s):
     if i != (len(s) - 1) and roman[s[i]] < roman[s[i+1]]:
