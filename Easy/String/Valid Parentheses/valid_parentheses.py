@@ -26,10 +26,7 @@ class Solution:
                         return False
             else:
                 return False
-        if stack_contains_open_brackets:
-            return False
-
-        return True
+        return len(stack_contains_open_brackets) == 0
     
 s = "])"
 
